@@ -1,0 +1,29 @@
+.parentBox{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    color: black;
+    border-radius: 4px;
+    min-width: 700px;
+}
+
+.top{
+    display: flex;
+    justify-content: center !important;
+}
+
+.description{
+    min-width: 10rem;
+    min-height: 10rem;
+}
+
+.selectors{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button{
+    color: black !important;
+}

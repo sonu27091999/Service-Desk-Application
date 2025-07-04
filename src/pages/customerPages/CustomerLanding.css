@@ -1,0 +1,21 @@
+.newTicket{
+    margin-left: 15.85rem;
+}
+
+.AppbarCust{
+    background-color: chartreuse !important;    
+}
+
+.containerCust{
+    display: flex;
+    margin-left: 1px !important;
+    color: black;
+}
+
+.boxesCust{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}

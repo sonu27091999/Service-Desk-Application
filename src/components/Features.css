@@ -1,0 +1,35 @@
+.featureSection {
+    margin-top: 50px !important;
+    padding: 1rem;
+    color: #fff !important; 
+    background-color: rgb(17, 41, 73) !important;
+    border: blue solid 3px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ticketImg, .trackImg, .priorityImg {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 3rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.subTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    padding-left: 16px; 
+}
+
+.subText {
+    text-align: left; 
+    margin-bottom: 8px;
+}

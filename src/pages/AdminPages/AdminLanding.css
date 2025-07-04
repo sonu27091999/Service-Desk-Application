@@ -1,0 +1,17 @@
+.AppbarAdmin{
+    background-color: chartreuse !important;    
+}
+
+.containerAdmin{
+    display: flex;
+    margin-left: 1px !important;
+    color: black;
+}
+
+.boxesAdmin{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}

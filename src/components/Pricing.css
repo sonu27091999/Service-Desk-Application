@@ -1,0 +1,45 @@
+.parentCard {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    margin-top: 50px !important;
+    padding: 1rem;
+    color: #fff !important;
+    flex-direction: column;
+    background-color: rgb(17, 41, 73) !important;
+    border: blue solid 2px;
+}
+
+.header {
+    text-align: center;
+}
+
+.cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    height: 470px;
+    background-color: rgb(17, 41, 73) !important;
+    border: #fff solid 3px;
+}
+
+.actualCard {
+    padding: 20px;
+    width: 250px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.actualCard>div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+}

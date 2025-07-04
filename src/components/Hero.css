@@ -1,0 +1,19 @@
+.Hero{
+    display: flex;
+    margin-top: 70px !important;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    color:#000 !important;
+}
+
+.deskImage{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.theImage{
+    max-height: 400px;
+    max-width: 400px;
+    height: auto;
+}

@@ -1,0 +1,37 @@
+.containerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 600px;
+}
+
+.viewBoxTop {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.descriptionText {
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    max-width: 64ch;
+}
+
+.categoryText {
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    max-width: 64ch;
+}
+
+.priorityText {
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    max-width: 5ch;
+}
+
+.statusText {
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    max-width: 10ch;
+    text-decoration: underline !important;
+}

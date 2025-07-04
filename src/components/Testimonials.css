@@ -1,0 +1,21 @@
+.testimonialSection{
+    margin-top: 50px !important;
+    padding: 1.5rem;
+    color: #333 !important;
+    background-color: #fff !important;
+    border: blue solid 2px;
+    text-decoration: solid;
+}
+
+.topOrder{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 50px !important;
+    padding: 1rem;
+    color: #333 !important;
+    background-color: rgb(17, 41, 73) !important;
+    border: blue solid 2px;
+    text-decoration: solid;
+}
