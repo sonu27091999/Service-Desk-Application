@@ -1,0 +1,62 @@
+name: Checkmarx AST Scan
+
+on:
+  push:
+    branches:
+      - master
+      - test
+      - dev
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checkmarx-ast:
+    permissions:
+      contents: read # Required for actions/checkout to fetch code
+      security-events: write # Needed for GitHub/codeql-action/upload-sarif
+      actions: read # Only required for private repositories
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout Repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Run Checkmarx AST Scan
+      - name: Checkmarx AST Github Action
+        uses: Checkmarx/ast-github-action@2.0.23
+        with:
+          # Provide the AST portal URL
+          base_uri: https://ind.ast.checkmarx.net
+          # Provide the Tenant for AST portal URL
+          cx_tenant: sudha
+          # Client ID for AST portal authentication
+          cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+          # Secret key for AST portal authentication
+          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          # Checkmarx Project Name (defaults to GitHub repository name if not provided)
+          project_name: ${{ github.repository }}
+          # Branch Name
+          branch: ${{ github.head_ref || github.ref }}
+          # Additional scan parameters (modify as needed)
+          additional_params: --report-format sarif --output-path .
+
+      # Step 3: Upload SARIF Report for GitHub Security Integration
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: cx_result.sarif
+
+      # Step 4: Upload Logs as Artifacts
+      - uses: actions/upload-artifact@v4
+        name: Upload Logs
+        with:
+          name: checkmarx-ast-report
+          path: ./cx_result.sarif
